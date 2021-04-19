@@ -18,8 +18,10 @@ exports.create = (req, res) => {
 
         name: req.body.name,
         email: req.body.email,
-        gender: req.body.gender,
-        status: req.body.status
+        phone:req.body.phone,
+        address:req.body.address
+        //gender: req.body.gender,
+        //status: req.body.status
     })
 
     user

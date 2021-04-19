@@ -12,8 +12,17 @@ email:{
     required:true,
     unique:true
 },
-gender:String,
-status:String
+
+phone:{
+    type:Number
+},
+
+address:{
+    type:String
+}
+
+// gender:String,
+//status:String
 
 })
 

@@ -3,6 +3,8 @@ const dotenv=require('dotenv')
 const morgan=require("morgan")
 const bodyparser = require("body-parser");
 const path = require('path');
+//const swaggerUi = require("swagger-ui-express");
+//const swaggerJsdoc = require("swagger-jsdoc");
 
 const connectDB=require('./server/database/connection')
 
@@ -10,7 +12,9 @@ const app = express();
 
 dotenv.config({path:'config.env'})
 
-const PORT=process.env.PORT || 8080
+const PORT=process.env.PORT || 8081
+
+
 
 //log requests
 
@@ -38,4 +42,4 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 
 app.use('/',require('./server/routes/router'))
 
-app.listen(PORT,()=>{console.log("server is running on http://localhost:8080")})
+app.listen(PORT,()=>{console.log("server is running on http://localhost:8081")})
